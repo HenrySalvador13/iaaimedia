@@ -446,6 +446,211 @@
     border-radius: 100px;
   }
 
+  /* RESULTS */
+  .results-section { background: var(--black); color: var(--white); padding: 6rem 2.5rem; }
+  .results-section .section-label { color: var(--green-light); }
+  .results-section .section-label::after { background: rgba(255,255,255,0.1); }
+
+  .results-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+    margin-bottom: 4rem;
+  }
+
+  .results-header h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: var(--white);
+  }
+
+  .results-header h2 em { font-style: italic; font-weight: 300; color: var(--green-light); }
+  .results-header p { color: rgba(245,242,237,0.5); font-size: 1rem; line-height: 1.7; }
+
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .number-card {
+    background: #0F0F0F;
+    padding: 2.5rem 2rem;
+    transition: background 0.2s;
+  }
+
+  .number-card:hover { background: #161616; }
+  .number-card.big { padding: 3rem 2.5rem; background: #111; }
+
+  .number-platform {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green-light);
+    margin-bottom: 1.25rem;
+  }
+
+  .number-val {
+    font-family: 'Fraunces', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .number-card.big .number-val { font-size: 5rem; }
+
+  .number-val span { color: var(--green-light); }
+
+  .number-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+  }
+
+  .number-sub { font-size: 0.78rem; color: rgba(245,242,237,0.35); line-height: 1.5; }
+
+  /* CASE STUDY */
+  .case-study-section { background: var(--cream); padding: 6rem 2.5rem; }
+
+  .cs-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+    margin-bottom: 4rem;
+  }
+
+  .cs-header h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .cs-header h2 em { font-style: italic; font-weight: 300; color: var(--green); }
+  .cs-header p { font-size: 1rem; color: var(--muted); line-height: 1.7; }
+
+  .cs-body {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .cs-before, .cs-after { padding: 2.5rem; }
+  .cs-before { background: #F0EDE8; }
+  .cs-after { background: var(--white); }
+
+  .cs-arrow {
+    font-size: 2rem;
+    color: var(--green);
+    font-weight: 700;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .cs-month {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cs-month.after { color: var(--green); }
+
+  .cs-stats-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .cs-stat-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .cs-stat-row.bad { color: var(--muted); }
+  .cs-stat-row.good { color: var(--black); }
+
+  .cs-icon {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  .cs-stat-row.bad .cs-icon { background: rgba(10,10,10,0.08); color: var(--muted); }
+  .cs-stat-row.good .cs-icon { background: var(--green-pale); color: var(--green); }
+
+  .cs-quote {
+    background: var(--black);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 3rem;
+    position: relative;
+  }
+
+  .cs-quote-mark {
+    font-family: 'Fraunces', serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--green-light);
+    line-height: 0.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .cs-quote p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(245,242,237,0.8);
+    max-width: 680px;
+    margin-bottom: 1.25rem;
+  }
+
+  .cs-attr {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--green-light);
+  }
+
+  @media (max-width: 768px) {
+    .results-header, .cs-header { grid-template-columns: 1fr; gap: 1.5rem; }
+    .numbers-grid { grid-template-columns: 1fr 1fr; }
+    .cs-body { grid-template-columns: 1fr; }
+    .cs-arrow { transform: rotate(90deg); padding: 0; }
+  }
+
+  @media (max-width: 480px) {
+    .numbers-grid { grid-template-columns: 1fr; }
+  }
+
   /* PROCESS */
   .process { background: var(--black); color: var(--white); }
 
@@ -698,58 +903,97 @@
   </div>
 </section>
 
-<!-- WORK -->
-<section>
-  <div class="section-label reveal">Sample work</div>
-  <div class="work-intro">
-    <h2 class="reveal">Results we've <em>delivered.</em></h2>
-    <p class="reveal" style="color: var(--muted); font-size: 1rem; line-height: 1.7;">Real work, real outcomes. Here's what we've built for e-commerce brands like yours.</p>
+<!-- RESULTS NUMBERS -->
+<section class="results-section">
+  <div class="section-label reveal">Real numbers</div>
+  <div class="results-header">
+    <h2 class="reveal">The content<br>speaks <em>for itself.</em></h2>
+    <p class="reveal">Every number below is verified and screenshot-backed. No inflated claims — just what the platforms reported.</p>
   </div>
-  <div class="work-grid reveal">
-    <div class="work-card">
-      <div class="work-visual v1">
-        <span style="font-style:italic; font-size: 3.5rem;">Drop.</span>
-        <div class="work-visual-label">Fashion brand</div>
-      </div>
-      <div class="work-info">
-        <h4>Product drop campaign</h4>
-        <p>A 10-piece content package for a new collection launch — hooks, carousels, and video scripts built to drive opening-week sales.</p>
-        <div class="work-result">↑ 40% engagement on launch week</div>
+  <div class="numbers-grid reveal">
+    <div class="number-card big">
+      <div class="number-platform">TikTok</div>
+      <div class="number-val">1<span>M</span></div>
+      <div class="number-label">Views on a single video</div>
+      <div class="number-sub">24.3K likes · 605 shares · 356 saves</div>
+    </div>
+    <div class="number-card">
+      <div class="number-platform">Pinterest</div>
+      <div class="number-val">1.35<span>M</span></div>
+      <div class="number-label">Impressions in 90 days</div>
+      <div class="number-sub">Organic · Single video pin</div>
+    </div>
+    <div class="number-card">
+      <div class="number-platform">Instagram Reel</div>
+      <div class="number-val">113<span>K</span></div>
+      <div class="number-label">Views on one Reel</div>
+      <div class="number-sub">3.3K likes · 9,912 interactions</div>
+    </div>
+    <div class="number-card">
+      <div class="number-platform">Instagram Account</div>
+      <div class="number-val">+181<span>%</span></div>
+      <div class="number-label">Reach growth in 30 days</div>
+      <div class="number-sub">1M accounts reached · 30.1K engaged</div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="case-study-section">
+  <div class="section-label reveal">Case study</div>
+  <div class="cs-header reveal">
+    <h2>From <em>0 to 100 clients</em><br>in 3 months.</h2>
+    <p>A real client. A culinary courses brand. Zero social presence when we started.</p>
+  </div>
+  <div class="cs-body reveal">
+    <div class="cs-before">
+      <div class="cs-month">Month 1</div>
+      <div class="cs-stats-list">
+        <div class="cs-stat-row bad">
+          <span class="cs-icon">✕</span>
+          <span>119 total views</span>
+        </div>
+        <div class="cs-stat-row bad">
+          <span class="cs-icon">✕</span>
+          <span>0 clients from content</span>
+        </div>
+        <div class="cs-stat-row bad">
+          <span class="cs-icon">✕</span>
+          <span>No strategy, basic posts</span>
+        </div>
+        <div class="cs-stat-row bad">
+          <span class="cs-icon">✕</span>
+          <span>0% reach to non-followers</span>
+        </div>
       </div>
     </div>
-    <div class="work-card">
-      <div class="work-visual v2">
-        <span style="font-size: 2.5rem; text-align:center; padding: 1rem;">30<br>days.</span>
-        <div class="work-visual-label" style="color: rgba(212,237,224,0.6);">DTC skincare</div>
-      </div>
-      <div class="work-info">
-        <h4>Weekly content system</h4>
-        <p>Ongoing social content across Instagram, TikTok, and X for a skincare DTC brand with a full 30-day pipeline built upfront.</p>
-        <div class="work-result">3-month consistent posting streak</div>
-      </div>
-    </div>
-    <div class="work-card">
-      <div class="work-visual v3">
-        <span style="font-size: 2.5rem; text-align:center; padding: 1rem;">85%<br>watch.</span>
-        <div class="work-visual-label" style="color: rgba(26,92,58,0.5);">Accessories</div>
-      </div>
-      <div class="work-info">
-        <h4>Reels script series</h4>
-        <p>12 hook-driven video scripts for an accessories brand entering the US market. Built for watch time, not just views.</p>
-        <div class="work-result">Avg. 85% watch time</div>
-      </div>
-    </div>
-    <div class="work-card">
-      <div class="work-visual v4">
-        <span style="font-size: 2.5rem; text-align:center; padding: 1rem;">50<br>ads.</span>
-        <div class="work-visual-label" style="color: rgba(10,10,10,0.5);">Home goods</div>
-      </div>
-      <div class="work-info">
-        <h4>Paid ad copy vault</h4>
-        <p>50 ad variations for A/B testing across Meta and TikTok, built for a home goods brand scaling into new markets.</p>
-        <div class="work-result">↓ 22% CPM within first month</div>
+    <div class="cs-arrow">→</div>
+    <div class="cs-after">
+      <div class="cs-month after">Month 3</div>
+      <div class="cs-stats-list">
+        <div class="cs-stat-row good">
+          <span class="cs-icon">✓</span>
+          <span>392,774 accounts reached</span>
+        </div>
+        <div class="cs-stat-row good">
+          <span class="cs-icon">✓</span>
+          <span>+100 new clients</span>
+        </div>
+        <div class="cs-stat-row good">
+          <span class="cs-icon">✓</span>
+          <span>Full content + sales strategy</span>
+        </div>
+        <div class="cs-stat-row good">
+          <span class="cs-icon">✓</span>
+          <span>1M+ reach across all platforms</span>
+        </div>
       </div>
     </div>
+  </div>
+  <div class="cs-quote reveal">
+    <div class="cs-quote-mark">"</div>
+    <p>Month 1 we had 119 views and zero clients from content. By month 3 we had reached 392K accounts on Instagram alone — and over 100 new clients came in that quarter.</p>
+    <div class="cs-attr">— Culinary Courses Brand, India</div>
   </div>
 </section>
 
